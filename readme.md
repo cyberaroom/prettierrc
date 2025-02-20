@@ -1,4 +1,4 @@
-# Enhanced Prettier Configuration
+# cyberaroom-prettierrc
 
 This is an advanced Prettier configuration that includes multiple plugins and specific formatting rules for different file types.
 
