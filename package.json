@@ -1,9 +1,9 @@
 {
-	"name": "prettierrc",
+	"name": "cyberaroom-prettierrc",
 	"version": "1.0.0",
 	"description": "quick. easy. readable.",
 	"main": "./src/index.js",
-  "types": "./src/index.d.ts",
+	"types": "./src/index.d.ts",
 	"keywords": [
 		"prettier",
 		"prettierrc",
@@ -13,7 +13,7 @@
 		"prettier-plugin-jsdoc",
 		"prettier-plugin-prisma"
 	],
-	"author": "cyberaroom",
+	"author": "oldiberezkoo",
 	"license": "MIT",
 	"peerDependencies": {
 		"prettier": "^3.5.1",
