@@ -1,6 +1,6 @@
 {
 	"name": "cyberaroom-prettierrc",
-	"version": "1.0.2",
+	"version": "1.0.3",
 	"description": "quick. easy. readable.",
 	"main": "./src/index.js",
 	"types": "./src/index.d.ts",
