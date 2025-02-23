@@ -61,7 +61,6 @@ module.exports = {
 | `*.ts`, `*.tsx`             | TypeScript | Import sorting, JSDoc, Tailwind |
 | `*.js`, `*.jsx`, `*.mjs`    | Babel      | Import sorting, JSDoc           |
 | `*.json`                    | JSON       | -                               |
-| `.npmrc`, `.env*`           | INI        | -                               |
 | `nginx*.conf`               | Nginx      | Nginx syntax support            |
 | `*.html`                    | HTML       | Attribute sorting               |
 | `*.prisma`                  | Prisma     | Schema formatting               |
