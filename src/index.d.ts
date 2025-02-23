@@ -5,7 +5,8 @@ declare const config: Config & {
 	overrides: Array<{
 		files: string | string[]
 		options: {
-			parser?: "typescript" | "ini" | "nginx" | "html"
+			parser?: "typescript" | "babel" | "json" | "ini" | "nginx" | "html" | string
+			plugins?: string[]
 		}
 	}>
 	printWidth: number
@@ -19,6 +20,8 @@ declare const config: Config & {
 	arrowParens: "always"
 	vueIndentScriptAndStyle: boolean
 	endOfLine: "lf"
+	attributeGroups?: string[]
+	attributeIgnoreCase?: boolean
 }
 
 export = config
