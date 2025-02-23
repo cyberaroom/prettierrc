@@ -19,15 +19,15 @@ Advanced Prettier configuration with multi-filetype support and plugin ecosystem
 npm install --save-dev cyberaroom-prettierrc prettier
 ```
 
-Plugins will be installed automatically (for npm 7+). For legacy package managers:
+Install plugins:
 
 ```bash
-npm install --save-dev \
-  prettier-plugin-tailwindcss \
-  prettier-plugin-organize-imports \
-  prettier-plugin-organize-attributes \
-  prettier-plugin-jsdoc \
-  prettier-plugin-prisma \
+npm install --save-dev
+  prettier-plugin-tailwindcss
+  prettier-plugin-organize-imports
+  prettier-plugin-organize-attributes
+  prettier-plugin-jsdoc
+  prettier-plugin-prisma
   prettier-plugin-nginx
 ```
 

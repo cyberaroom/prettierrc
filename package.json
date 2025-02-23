@@ -38,7 +38,4 @@
 			"optional": true
 		}
 	},
-	"dependencies": {
-		"cyberaroom-prettierrc": "file:"
-	}
 }
