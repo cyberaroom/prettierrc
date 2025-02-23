@@ -15,7 +15,7 @@ declare const config: Config & {
 	quoteProps: "as-needed"
 	trailingComma: "es5"
 	bracketSpacing: boolean
-	bracketSameLine: boolean 
+	bracketSameLine: boolean
 	arrowParens: "always"
 	vueIndentScriptAndStyle: boolean
 	endOfLine: "lf"

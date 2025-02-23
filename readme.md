@@ -1,33 +1,39 @@
 # cyberaroom-prettierrc
 
-This is an advanced Prettier configuration that includes multiple plugins and specific formatting rules for different file types.
+Advanced Prettier configuration with multi-filetype support and plugin ecosystem integration.
 
-## Features
+## ✨ Features
 
-- 📌 **Tailwind CSS class sorting** (via `prettier-plugin-tailwindcss`)
-- 🔄 **Automatic import organization** (via `prettier-plugin-organize-imports`)
-- 🏗 **HTML attribute organization** (via `prettier-plugin-organize-attributes`)
-- 📝 **JSDoc formatting** (via `prettier-plugin-jsdoc`)
-- 🛠 **Prisma schema formatting** (via `prettier-plugin-prisma`)
-- 🗂 **Consistent formatting for multiple file types**
+- 🎨 **Tailwind CSS** class sorting and formatting
+- 📦 **Automatic import organization** for JS/TS
+- 🏷 **HTML/JSX attribute ordering** with custom groups
+- 📝 **JSDoc documentation formatting**
+- 🗄 **Prisma schema** auto-formatting
+- 🌐 **Nginx config** syntax support
+- 📄 **Multi-parser support** for 10+ file types
+- 🔧 **Consistent code style** across entire project
 
-## Installation
-
-1. Install Prettier and the required plugins:
-
-```bash
-npm install --save-dev prettier cyberaroom-prettierrc
-```
-
-2. If your project requires additional Prettier plugins (e.g., Tailwind, Prisma, etc.), install them separately:
+## 📦 Installation
 
 ```bash
-npm install --save-dev prettier-plugin-tailwindcss prettier-plugin-organize-imports prettier-plugin-organize-attributes prettier-plugin-jsdoc prettier-plugin-prisma
+npm install --save-dev cyberaroom-prettierrc prettier
 ```
 
-3. Add the configuration to your project:
+Plugins will be installed automatically (for npm 7+). For legacy package managers:
 
-- **In `package.json`:**
+```bash
+npm install --save-dev \
+  prettier-plugin-tailwindcss \
+  prettier-plugin-organize-imports \
+  prettier-plugin-organize-attributes \
+  prettier-plugin-jsdoc \
+  prettier-plugin-prisma \
+  prettier-plugin-nginx
+```
+
+## ⚙️ Configuration
+
+1. **Basic setup** (package.json):
 
 ```json
 {
@@ -35,41 +41,106 @@ npm install --save-dev prettier-plugin-tailwindcss prettier-plugin-organize-impo
 }
 ```
 
-- **Or create a `.prettierrc` file:**
+2. **Advanced setup** (.prettierrc.js):
 
-```json
-"cyberaroom-prettierrc"
+```javascript
+module.exports = {
+	extends: "cyberaroom-prettierrc",
+	// Optional plugin-specific configs
+	tailwindConfig: "./tailwind.config.js",
+	prisma: {
+		schema: "./prisma/schema.prisma",
+	},
+}
 ```
 
-## Usage
+## 📋 Supported File Types
 
-### Format all files in the project:
+| File Patterns               | Parser     | Plugins                         |
+| --------------------------- | ---------- | ------------------------------- |
+| `*.ts`, `*.tsx`             | TypeScript | Import sorting, JSDoc, Tailwind |
+| `*.js`, `*.jsx`, `*.mjs`    | Babel      | Import sorting, JSDoc           |
+| `*.json`                    | JSON       | -                               |
+| `.npmrc`, `.env*`           | INI        | -                               |
+| `nginx*.conf`               | Nginx      | Nginx syntax support            |
+| `*.html`                    | HTML       | Attribute sorting               |
+| `*.prisma`                  | Prisma     | Schema formatting               |
+| `*.css`, `*.scss`, `*.sass` | CSS/SCSS   | Tailwind class sorting          |
+
+## 🛠 Plugin Configuration
+
+### Tailwind CSS
+
+Add Tailwind config path in your project's Prettier config:
+
+```javascript
+// .prettierrc.js
+module.exports = {
+	tailwindConfig: "./tailwind.config.js",
+}
+```
+
+### HTML/JSX Attribute Ordering
+
+Attributes are sorted in this order:
+
+1. `class`
+2. `id`, `name`
+3. Default group
+4. `aria-*` attributes
+
+Enable case-insensitive sorting:
+
+```javascript
+// .prettierrc.js
+module.exports = {
+	attributeIgnoreCase: false, // default: true
+}
+```
+
+## 🚀 Usage
+
+Format all supported files:
 
 ```bash
 npx prettier --write .
 ```
 
-### Check formatting without making changes:
+Check formatting:
 
 ```bash
 npx prettier --check .
 ```
 
-## Supported File Types
-
-This configuration applies formatting to multiple file types:
-
-| File Type                                                        | Parser     |
-| ---------------------------------------------------------------- | ---------- |
-| `.ts`, `.tsx`, `.js`, `.jsx`, `.mjs`, `.cjs`, `.json`, `.prisma` | TypeScript |
-| `.npmrc`, `.env`, `.env.*`                                       | INI        |
-| `nginx.conf`, `nginx/**/*.conf`                                  | Nginx      |
-| `.html`                                                          | HTML       |
-
-## Updating the Configuration
-
-To update this Prettier configuration package in your project:
+Format specific file types:
 
 ```bash
-npm update cyberaroom-prettierrc
+npx prettier --write '**/*.tsx'
 ```
+
+## ⚠️ Troubleshooting
+
+**Common issues:**
+
+1. **Plugins not working**:
+
+   - Ensure all plugins are in `devDependencies`
+   - Clear Prettier cache: `npx prettier --clear-cache`
+
+2. **Tailwind class sorting**:
+
+   - Verify `tailwind.config.js` exists
+   - Restart IDE after configuration changes
+
+3. **Nginx config support**:
+   - Install `prettier-plugin-nginx` separately if using npm <7
+
+## 🔄 Version Policy
+
+- Compatible with Prettier 3.x
+- Tested with Node.js 18+
+- Semantic versioning (breaking changes in major versions)
+
+## 📄 License
+
+MIT © [cyberaroom](https://github.com/cyberaroom)
