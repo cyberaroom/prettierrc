@@ -1,6 +1,6 @@
 {
 	"name": "cyberaroom-prettierrc",
-	"version": "1.0.3",
+	"version": "1.0.4",
 	"description": "quick. easy. readable.",
 	"main": "./src/index.js",
 	"types": "./src/index.d.ts",
@@ -38,4 +38,7 @@
 			"optional": true
 		}
 	},
+	"dependencies": {
+		"cyberaroom-prettierrc": "file:"
+	}
 }

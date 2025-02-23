@@ -22,7 +22,7 @@ module.exports = {
 			options: { parser: "json" },
 		},
 		{
-			files: [".npmrc", ".env", ".env.*"],
+			files: [".env", ".env.*"],
 			options: { parser: "ini" },
 		},
 		{
@@ -66,5 +66,4 @@ module.exports = {
 	// Настройки плагинов
 	attributeGroups: ["^class$", "^(id|name)$", "$DEFAULT", "^aria-"],
 	attributeIgnoreCase: true,
-
 }
