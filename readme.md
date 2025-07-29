@@ -1,4 +1,4 @@
-# 📦 cyberaroom‑prettierrc
+# 📦 cyberaroom‑prettierrc [v2 in testing, don't use it verison]
 
 Lightweight yet powerful Prettier config to keep your code consistent and professional.
 
