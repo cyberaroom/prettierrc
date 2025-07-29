@@ -1,10 +1,8 @@
-# .prettierignore
-.next
-node_modules
+.gitignore
+.prettierignore
+.prettierrc
 pnpm-lock.yaml
-yarn.lock
-dist
-build
-out
-*.logs
-.git
+pnpm-workspace.yaml	
+dist/
+node_modules/
+tsup.config.ts

@@ -1,0 +1,23 @@
+{
+  "name": "prettier",
+  "version": "1.0.0",
+  "description": "",
+  "module": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "ts-node ./index.ts ",
+    "test:prettier": "node prettier-tests.js",
+    "test:prettier:watch": "nodemon prettier-tests.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "packageManager": "pnpm@10.8.0",
+  "peerDependencies": {
+    "prettier": "^3.6.2"
+  },
+  "devDependencies": {
+    "ts-node": "^10.9.2"
+  }
+}
