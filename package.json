@@ -1,13 +1,13 @@
 {
   "name": "cyberaroom-prettierrc",
-  "version": "2.0.2",
+  "version": "2.0.3",
   "description": "quick. easy. readable.",
   "main": "dist/index.cjs",
   "module": "dist/index.mjs",
   "types": "dist/index.d.ts",
   "repository": {
     "type": "github",
-    "url": "https://github.com/cyberaroom/prettierrc.git"
+    "url": "git+https://github.com/cyberaroom/prettierrc.git"
   },
   "workspaces": [
     "src/*",
@@ -21,8 +21,11 @@
   },
   "files": [
     ".prettierignore",
-    "src/index.js",
-    "src/index.d.ts"
+    "./dist/index.js",
+    "./dist/index.d.ts",
+    "./dist/index.d.mts",
+    "./dist/index.mjs",
+    "./readme.md"
   ],
   "keywords": [
     "prettier",
